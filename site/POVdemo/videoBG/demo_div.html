@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+	<title>Make an HTML5 video a background - div bg demo</title>
+<!--
+	<link rel="stylesheet" href="assets/framework.css"/>
+
+	<link rel="stylesheet" href="assets/style.css"/>
+-->
+
+	<script type="text/javascript" src="assets/jquery-1.5.1.js"></script>
+	<script type="text/javascript" src="jquery.videoBG.js"></script>
+	<script type="text/javascript">
+	
+	
+	$(document).ready(function() {
+/*
+	$('body').videoBG({
+		position:"fixed",
+		zIndex:0,
+		mp4:'assets/christmas_snow.mp4',
+		ogv:'assets/christmas_snow.ogv',
+		webm:'assets/christmas_snow.webm',
+		poster:'assets/christmas_snow.jpg',
+		opacity:1,
+		fullscreen:true,
+	});
+*/	
+	$('#div_demo').videoBG({
+		mp4:'assets/tunnel_animation.mp4',
+		ogv:'assets/tunnel_animation.ogv',
+		webm:'assets/tunnel_animation.webm',
+		poster:'assets/tunnel_animation.jpg',
+		scale:true,
+		zIndex:0
+	});
+})</script>
+
+
+<style type="text/css">#div_demo{display:block;width:100%;margin-left:0px;margin-right:0px;height:200px;}
+body{padding:0px;margin:0px;}
+</style>
+	</head>
+<body>
+	
+
+
+
+					<div id="div_demo">	</div>
+
+
+
+
+</body>
+</html>

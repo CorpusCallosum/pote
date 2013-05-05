@@ -1,0 +1,49 @@
+
+
+<html>
+
+    <head><style type="text/css">body{height: 200%; width: 200%; /* background-image:url('img/videos/video1.mp4'); */ /* background-repeat:repeat-xy; background-attachment: fixed; */ font-family: 'Ubuntu Condensed', sans-serif; text-shadow: black 0px 0px 4px;}
+    #div{color: white; font-size:3em; margin: 64px 64px 32px 128px;}
+    #div2{display:block; width:500px; height:200px;background-image:url('img/landscape1.jpg'); border-radius: 8px; margin-bottom: 10%; color: white; font-size:1em; padding: 16px;float: left; margin: 32px 64px 32px 128px; text-shadow: none;}
+    #video_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1000;
+}
+    
+    
+    </style>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+
+
+        <script>
+            function onLoad() {
+                window.onscroll = function() {
+                    var speed = 6.0;
+                    document.body.style.backgroundPosition = (-window.pageXOffset / speed) + "px " + (-window.pageYOffset / speed) + "px";
+                }
+            }
+        </script>
+
+
+
+    </head>
+
+
+    <body onload="onLoad()" >
+<video id="video_background" src="video.mp4" autoplay>
+
+
+        <div id="div">
+            Dead simple background parallax scrolling in javascript.<br>
+            (scroll up, down, left, and right)
+        </div>
+<div id="div2"></div>
+
+
+    </body>
+
+</html>

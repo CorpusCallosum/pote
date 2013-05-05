@@ -1,0 +1,177 @@
+// JavaScript Document
+//scroll audio controls
+
+//initiate the audio
+
+
+var soundIndex = 0;
+var lastSoundIndex = 0;
+var sounds = [["asim","tazim"],["bilal","kashmir"],["sandeep","junaid"]];
+var leftSound;  // the soundInstance returned by Sound when we create or play a src
+var rightSound;
+
+
+
+//this code below just sets the mute function on and off:
+$("#volumeControl").click(function() {
+if (isMute==false){
+ isMute=true; 
+ //silence the audio
+ createjs.Sound.setVolume(0);
+ //change to unmuted icon in mute button
+ var muteButton=document.getElementById('muteButtonImg');
+ muteButton.src='img/volume_mute.png';
+	
+ 
+}else{isMute=false;
+ //turn audio back on:
+ createjs.Sound.setVolume(1);
+ //change to muted icon in mute button
+  var muteButton=document.getElementById('muteButtonImg');
+ muteButton.src='img/volume.png';
+}
+});
+
+
+
+
+/*
+if(isMute==false){//here I'm trying to get it to only execute this code if the mute is on False 
+}else{ //else if isMute==true, mute the sound
+     leftSound.setVolume(0);
+     rightSound.setVolume(0);
+}
+*/
+
+
+
+
+
+leftSound = createjs.Sound.play(sounds[soundIndex][0],  createjs.Sound.INTERRUPT_ANY, 0, 0, -1, 1, 1);  // start playing the sound we just loaded, storing the playing instance
+             rightSound =  createjs.Sound.play(sounds[soundIndex][1],  createjs.Sound.INTERRUPT_ANY, 0, 0, -1, 1, 1);
+init(sounds[soundIndex][0],sounds[soundIndex][1]);
+
+
+stopSounds();
+
+window.onscroll = function (oEvent) {
+  // called when the window is scrolled.
+  st = document.getElementsByTagName("body")[0].scrollTop + $(window).height();
+ // alert(st);
+ 
+ if(st <  $("#conflict1").offset().top){
+	//don't load any sounds
+	//stop sounds
+	stopSounds();
+	soundIndex = -1;
+ }else{
+ 
+ if(st >  $("#conflict1").offset().top){
+  	   soundIndex = 0;
+
+ }
+  if(st >  $("#conflict2").offset().top){
+	 // stopSounds();
+	  //init("asim","tazim");
+      soundIndex = 1;
+  }
+  
+  if(st >  $("#conflict3").offset().top){
+	 // stopSounds();
+	  //init("asim","tazim");
+      soundIndex = 2;
+  }
+  
+  
+  //load sound?
+  if(lastSoundIndex != soundIndex){
+	stopSounds();
+	init(sounds[soundIndex][0],sounds[soundIndex][1]);
+  }
+  
+  
+ }
+  lastSoundIndex = soundIndex;
+}
+
+
+//************************
+
+
+        var srcLeft, srcRight;            // the audio src we are trying to play
+       
+        var displayStatus;  // the HTML element we use to display messages to the user
+
+        function init(leftName,rightName) {
+          
+            // Create a single item to load.
+            var assetsPath = "assets/";
+            srcLeft = assetsPath+leftName+".mp3|"+assetsPath+leftName+".ogg";
+			
+			//RIGHT sound
+			 srcRight = assetsPath+rightName+".mp3|"+assetsPath+rightName+".ogg";
+			 
+			 leftSound = createjs.Sound.play(srcLeft,  createjs.Sound.INTERRUPT_ANY, 0, 0, -1, 1, leftSound.getVolume());  // start playing the sound we just loaded, storing the playing instance
+             rightSound =  createjs.Sound.play(srcRight,  createjs.Sound.INTERRUPT_ANY, 0, 0, -1, 1, rightSound.getVolume());
+
+
+            // NOTE the "|" character is used by Sound to separate source into distinct files, which allows you to provide multiple extensions for wider browser support
+
+            //createjs.Sound.addEventListener("loadComplete", createjs.proxy(playSound,this)); // add an event listener for when load is completed
+			
+            //createjs.Sound.registerSound(src, "leftSound");  // register sound, which preloads by default
+			
+			//createjs.Sound.addEventListener("loadComplete", createjs.proxy(playSound,this)); // add an event listener for when load is completed
+          //  createjs.Sound.registerSound(srcRight, "rightSound");  // register sound, which preloads by default
+
+           // displayStatus.innerText = "Waiting for load to complete.";  // letting the user know what's happening
+        }
+        
+        
+
+        function playSound(evt) {
+        
+      
+        
+        
+            if (evt.src == src) {  // note that callback and event listener return the same event
+			var lv = leftSound.getVolume();
+                leftSound = createjs.Sound.play("leftSound",  createjs.Sound.INTERRUPT_ANY, 0, 0, -1, .1, -1);  // start playing the sound we just loaded, storing the playing instance
+				leftSound.setVolume(.1);
+            }
+			
+			 if (evt.src == srcRight) {  // note that callback and event listener return the same event
+			 var rv = leftSound.getVolume();
+                rightSound =  createjs.Sound.play("rightSound",  createjs.Sound.INTERRUPT_ANY, 0, 0, -1, .1, 1);
+			    rightSound.setVolume(.1);
+            }
+            
+            
+		}
+        
+        
+        
+		
+		function stopSounds(){
+			leftSound.stop();
+		    rightSound.stop();
+
+		}
+
+
+function updateVolume() {
+	
+	      var lineXpos = $("#line").offset().left;
+	 leftSound.setVolume(lineXpos/$(window).width());
+   rightSound.setVolume(1-(lineXpos/$(window).width())); 
+   
+
+}
+
+     
+	     
+var refreshId = setInterval(updateVolume, 100);
+
+
+
+
