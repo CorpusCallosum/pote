@@ -38,7 +38,7 @@
 		//}
 		// Center the image
 		$(this).css('left', (browserwidth - $(this).width())/2);
-		//$(this).css('top', (browserheight - $(this).height())/2);
+		$(this).css('top', (browserheight - $(this).height())/2);
 		return this; 		
 	};
 })(jQuery);

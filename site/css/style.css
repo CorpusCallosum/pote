@@ -131,7 +131,7 @@ font-family: "Helvetica"
 
 #line {
    position: absolute;
-   background:rgba(0,0,0,.4);
+   background:rgba(0,0,0,1);
    height: 100%;
    width: 20px;
    cursor:/* pointer */ col-resize;
@@ -207,14 +207,14 @@ margin-top:-33px;
 .arrow-right {
 border-width: 17px 0 17px 28px;
 border-color: transparent transparent transparent rgba(255,255,255,1);
-margin-left:105px;
+margin-left:95px;
 
 }
 
 .arrow-left {
 border-width: 17px 28px 17px 0;
 border-color: transparent rgba(255,255,255,1) transparent transparent;
-margin-left:-132px;
+margin-left:-122px;
 margin-top:-33px;
 }
 
