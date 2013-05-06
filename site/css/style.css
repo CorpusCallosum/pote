@@ -153,15 +153,7 @@ font-family: "Helvetica"
 }
 
 /*
-.circle {position:fixed;
-	margin-top:-23px;
-	margin-left:-40px;
-    background: rgba(0,0,0,.5);   
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    z-index:-2;
-}
+
 
 .arrows{
 	width: 0px;
@@ -195,6 +187,17 @@ margin-top:-33px;
     z-index:103;
 	color:#FFF;
 }
+
+/*
+.circle {position:fixed;
+	margin-top:-23px;
+	margin-left:-40px;
+    background: rgba(0,0,0,.5);   
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    z-index:-2;
+}*/
 
 .arrows{
 	width: 0px;

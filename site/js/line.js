@@ -1,5 +1,6 @@
 // JavaScript Document
 
+var arrowsShrunk = false;
 
 //refresh line position to be in the middle and set the arrows to be next to it
   				var windowWidth= $(window).width();
@@ -15,6 +16,8 @@ jQuery(function($){
 		
   //track dragging of the line
       $('#line').drag(function( ev, dd ){
+							   	shrinkArrows();
+
 	  var windowWidth= $(window).width();
 
       $( this ).css({ left:dd.offsetX });
@@ -61,6 +64,8 @@ $('.moveLine').css({ left:lineXpos+10});
 
 //track the dragging of the arrow circle		
 	  $('.moveLine').drag(function( ev, dd ){
+	shrinkArrows();
+								   
 	  var windowWidth= $(window).width();
       $( this ).css({ left:dd.offsetX });
       var lineXpos = $(".moveLine").offset().left;
@@ -163,8 +168,45 @@ $('.moveLine').css({ left:lineXpos+10});
 
 
 //make the arrows appear on mouse move
-$("div").mousemove(function(e){
-  $('.moveLine').fadeIn(500);
-   $('.moveLine').delay(1000).fadeOut(500);
-   return;
-   });
+//$("div").mousemove(function(e){
+							  function fadeArrowsIn(){
+								  
+  $('.moveLine').fadeIn(1000, fadeArrowsOut);
+   
+							  }
+							  
+							  function fadeArrowsOut(){
+								   $('.moveLine').fadeOut(1000, fadeArrowsIn);
+  
+							  }
+							  
+							  fadeArrowsIn();
+							  
+function shrinkArrows(){
+	if(!arrowsShrunk){
+	
+		$('.circle').animate({
+	marginLeft: "-40px",   
+    width: "80px",
+    borderRadius: "50%"});
+		
+		//slide arrows
+		$('.arrow-right').animate({
+	marginLeft: "7px"});
+		
+		$('.arrow-left').animate({
+	marginLeft: "-33px"});
+		
+		//clear the div
+		$(".circle").empty();
+		
+		arrowsShrunk = true;
+
+	}
+		
+}
+
+$('.moveLine').mouseup(shrinkArrows);
+							  
+  // return;
+  // });
