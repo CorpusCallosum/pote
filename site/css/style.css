@@ -277,8 +277,8 @@ z-index:2000;
 
 
 }
-#footer p{color:white; font-family: "Helvetica Neue"; font-size: 14px; font-weight: lighter; margin-top:40px;letter-spacing:.1em; text-align: left; margin-left:20px;}
-#footer p a{color:white; text-decoration:none; cursor:pointer;text-decoration:underline;}
+#footer p{color:#999; font-family: "Helvetica Neue"; font-size: 14px; font-weight: lighter; margin-top:40px;letter-spacing:.1em; text-align: left; margin-left:20px;}
+#footer p a{color:white; text-decoration:none; cursor:pointer;}
 #footer p a:hover{text-decoration:underline;}
 #footer img{position:relative;float:right;margin-top:-30px; margin-right:50px;}
 

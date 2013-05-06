@@ -60,13 +60,11 @@ window.onscroll = function (oEvent) {
  }
   if(st >  $("#conflict2").offset().top){
 	 // stopSounds();
-	  //init("asim","tazim");
       soundIndex = 1;
   }
   
   if(st >  $("#conflict3").offset().top){
 	 // stopSounds();
-	  //init("asim","tazim");
       soundIndex = 2;
   }
   
