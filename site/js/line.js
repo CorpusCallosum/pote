@@ -128,7 +128,7 @@ $(document).ready(function() {
 
 $(window).resize(function() {
 					/* var introDiv_Height =$('#intro-video').height(); */
-					var introDiv_Height =$(window).height()*3.2;
+					var introDiv_Height =$(window).width()*1.86;
 	var Window_Height =$(window).height();
 $('#conflict1').css('top', introDiv_Height);
 $('#landscape1').css('top', WindowHeight+introDiv_Height);
