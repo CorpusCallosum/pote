@@ -184,18 +184,32 @@ $('.moveLine').css({ left:lineXpos+10});
 
 //make the arrows appear on mouse move
 //$("div").mousemove(function(e){
-							  function fadeArrowsIn(){
-								  
-  $('.moveLine').fadeIn(1000, fadeArrowsOut);
-   
+							  function fadeArrowsIn(){		  
+  								/* $('.moveLine').fadeIn(1000, fadeArrowsOut); */
+  								$('.moveLine').css('display', 'block');/* .animate({opacity:0},1); */
+  								$('.moveLine').animate({opacity:1},1500);
+                            fadeArrowsOut();
 							  }
 							  
+							  
+							  
 							  function fadeArrowsOut(){
-								   $('.moveLine').fadeOut(1000, fadeArrowsIn);
-  
+								   /* $('.moveLine').fadeOut(1000, fadeArrowsIn); */
+								   $('.moveLine').animate({opacity:.3},1500);
+								   fadeArrowsIn();
 							  }
 							  
 							  fadeArrowsIn();
+
+
+/*
+function blinkthearrow(){
+$('.ss-links2').animate({opacity:.5},2000).animate({opacity:1},2000).animate({opacity:.5},1000).animate({opacity:1},2000);}
+function fadethearrow(){$('.ss-links2').animate({opacity:0},2000);}
+*/
+
+
+
 							  
 function shrinkArrows(){
 	if(!arrowsShrunk){

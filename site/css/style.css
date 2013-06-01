@@ -253,7 +253,7 @@ z-index:2000;
 }
 
 #introDiv{display:block; position:absolute; top:0px;left:0px;height:1000px; width:100%;}
-.landscape{display:block; width:100%; height:100%; position:absolute;background:black;}
+.landscape{display:block; width:100%; height:100%; position:absolute;background:black;z-index:99999999999999;}
 .conflict{display:block; width:100%;height:100%; position:absolute; margin:0px; padding: 0px;}
 #conflict1{top:3000px; }
 #landscape1{top:4000px; background-image:url('../img/landscape1.jpg'); background-repeat: no-repeat; background-position: 50% 50%; background-size:100% 100%;}
