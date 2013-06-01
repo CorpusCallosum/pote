@@ -10,8 +10,10 @@ $('.arrow-right').css({ left:lineXposition-1});
 				$('.arrow-left').css({ left:lineXposition-40});
 */
 //refresh the line height to be the size of the document (not just the window)
-				var documentHeight= $(document).height();
+				/*
+var documentHeight= $(document).height();
 				$('#line').css({ height:documentHeight+20});
+*/
 jQuery(function($){
 		
   //track dragging of the line
@@ -125,21 +127,21 @@ $(document).ready(function() {
 */
 
 $(window).resize(function() {
-					var introDiv_Height =$('#intro-video').height();
+					/* var introDiv_Height =$('#intro-video').height(); */
+					var introDiv_Height =$(window).height()*3.2;
 	var Window_Height =$(window).height();
 $('#conflict1').css('top', introDiv_Height);
-$('#landscape1').css('top', Window_Height+introDiv_Height);
-$('#conflict2').css('top', Window_Height*2+introDiv_Height);
-$('#landscape2').css('top', Window_Height*3+introDiv_Height);
-$('#conflict3').css('top', Window_Height*4+introDiv_Height);
-$('#landscape3').css('top', Window_Height*5+introDiv_Height);	
+$('#landscape1').css('top', WindowHeight+introDiv_Height);
+$('#conflict2').css('top', WindowHeight*2+introDiv_Height);
+$('#landscape2').css('top', WindowHeight*3+introDiv_Height);
+$('#conflict3').css('top', WindowHeight*4+introDiv_Height);
+$('#landscape3').css('top', WindowHeight*5+introDiv_Height);
+$('#footer').css('top', WindowHeight*6+introDiv_Height);
+$('#line').css('height', WindowHeight*5.3+introDiv_Height);	
 
 
 				
-				/*
-var documentHeight= $(document).height();
-				$('#line').css({ height:documentHeight+20});
-*/
+
     var curWidth = $(window).width(); //store the window's current width
    // var delta = (curWidth- origWidth);
    // $("#line").offset({left:($("#line").offset().left + delta)});

@@ -12,7 +12,7 @@
         <link rel="shortcut icon" href="../favicon.ico"> 
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
         <link rel="stylesheet" type="text/css" href="css/styleScroll.css" />
-		<link rel="stylesheet" type="text/css" href="css/style_test.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<!-- DC Social Icons CSS -->
 		<link rel="stylesheet" type="text/css" href="http://www.dreamtemplate.com/dreamcodes/social_icons/tsc_social_icons.css" />
 		</head>
@@ -23,8 +23,7 @@
 
 <body>
 <!-- the line lives outside of the conflict divs so it can be as long as the whole document -->
-	<div id="enemyLine">
-		
+	<div id="enemyLine">		
 		<div class="moveLine">
 			<div class="circle"></br></br>DRAG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DRAG</div>
 			<div class="arrows arrow-right"></div>
@@ -33,37 +32,40 @@
         <div id="line"></div>
 	</div><!-- enemyLine -->
 
+
+
+
 <div id="volumeControl"><img id="muteButtonImg" src="img/volume.png"/></div>
+
+
+
 
 <div id="scrollDownArrow" class="ss-links">
 				<a class="ss-links2" href="#conflict1"><div class="arrow-down"></div></a>
 		</div>	
+
+
+
+
 
 <div id="introDiv">
 <video id="intro-video" width="0px" height="auto" autoplay loop >
     <source src="img/videos/bar_cropped_800.mp4" type="video/mp4" muted="false">
     <source src="img/videos/bar_cropped_800.webm" type="video/webm" muted="false">
 </video>
-
-	
 			<div id="ss-links" class="ss-links ss-links-before">
-				<!-- <a class="ss-links2" href="#conflict1"><div class="arrow-down"></div></a> -->
 				<a href="#introDiv"><p>INTRO</p></a>
 				<a href="#conflict1">1</a>
 				<a href="#conflict2">2</a>
 				<a href="#conflict3">3</a>
 				<a href="#footer"><p>CREDITS</p></a>
-			</div>
-	
-			
+			</div>			
          <div id="ss-container" class="ss-container">
-            
-               
                
                <div class="ss-row ss-small">
                     <div class="ss-left">
                         <h3>
-                            <span><!-- Some text about something here --></span>
+                            <span></span>
                         </h3>
                     </div>
                     <div class="ss-right">
@@ -76,28 +78,26 @@
                     </div>
                     <div class="ss-right">
                         <h3>
-                            <span><!-- Some text about something here --></span>
+                            <span></span>
                         </h3>
                     </div>
                 </div>
             
                 <div class="ss-row">
-                    <div class="ss-left title"><!-- LEFT SLIDE IN 1 -->
+                    <div class="ss-left title">
                          <h2 id="one">Portraits of the Enemies</h2> 
                     </div>
-                    <div class="ss-right"><!-- RIGHT SLIDE IN 1 -->
+                    <div class="ss-right">
                      </div>
                 </div>
-                
-                
-                
+            
                 <div class="ss-row ss-medium">
                     <div class="ss-left">
                         For the past four years Karim Ben Khelifa has been traveling to some of the world’s longest standing conflicts.
                     </div>
                     <div class="ss-right">
                         <h3>
-                            <span><!-- to photograph, film and interview  -->
+                            <span>
 							</span>  </h3>
                     </div>
                 </div>               
@@ -123,7 +123,6 @@
 	
 				<div class="ss-row ss-large">
                     <div class="ss-left">
-                       <!--  Some text about something here -->
                     </div>
                     <div class="ss-right">
                         <h3>
@@ -149,11 +148,9 @@
 </video>
 -->
 
-<div id="video_div1">	</div>
+<!-- <div id="video_div1">	</div> -->
 
 <!-- each conflict pair has their own conflict div -->
-
-
 
 
 
@@ -317,14 +314,17 @@ I want to see Kashmir and the world governed by the laws of Islam.
 
 	//initiate a main scroll tracker here and use this maybe //http://stackoverflow.com/questions/14390464/jquery-stick-div-on-scroll
 	//and the javascript plugin for easing and "scrollscript.js" if statements can activate a slow ease along with the volume boost of the new "active div", we can have the idea of active and passive divs. Videos can stop and sounds can stop for passive divs.
-	var introDiv_Height =$(window).height()*3.8;/* $('#intro-video').height(); */
-	var Window_Height =$(window).height();
+	var introDiv_Height =$(window).height()*3.3;/* $('#intro-video').height(); */
+	
+	var WindowHeight =$(window).height();
 $('#conflict1').css('top', introDiv_Height);
-$('#landscape1').css('top', Window_Height+introDiv_Height);
-$('#conflict2').css('top', Window_Height*2+introDiv_Height);
-$('#landscape2').css('top', Window_Height*3+introDiv_Height);
-$('#conflict3').css('top', Window_Height*4+introDiv_Height);
-$('#landscape3').css('top', Window_Height*5+introDiv_Height);
+$('#landscape1').css('top', WindowHeight+introDiv_Height);
+$('#conflict2').css('top', WindowHeight*2+introDiv_Height);
+$('#landscape2').css('top', WindowHeight*3+introDiv_Height);
+$('#conflict3').css('top', WindowHeight*4+introDiv_Height);
+$('#landscape3').css('top', WindowHeight*5+introDiv_Height);
+$('#footer').css('top', WindowHeight*6+introDiv_Height);
+$('#line').css('height', WindowHeight*5.3+introDiv_Height);
 		})
 	//activate the full screen mode:
 			var FullscreenrOptions = {  width: 1300, height: 1951, bgID: '.BigImage', idRight: '.BigImage' };
