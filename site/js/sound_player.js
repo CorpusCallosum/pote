@@ -46,7 +46,11 @@ window.onscroll = function (oEvent) {
   // called when the window is scrolled.
   st = document.getElementsByTagName("body")[0].scrollTop + $(window).height();
  // alert(st);
+ var windowHigh=$(window).height();
+ var introDiv_Height =$('#intro-video').height();
+ if(st>introDiv_Height+ windowHigh-125){$('#ss-links').removeClass('ss-links-before');}
  
+  
  if(st <  $("#conflict1").offset().top){
 	//don't load any sounds
 	//stop sounds

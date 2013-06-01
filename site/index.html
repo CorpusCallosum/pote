@@ -34,6 +34,11 @@
 	</div><!-- enemyLine -->
 
 <div id="volumeControl"><img id="muteButtonImg" src="img/volume.png"/></div>
+
+<div id="scrollDownArrow" class="ss-links">
+				<a class="ss-links2" href="#conflict1"><div class="arrow-down"></div></a>
+		</div>	
+
 <div id="introDiv">
 <video id="intro-video" width="0px" height="auto" autoplay loop >
     <source src="img/videos/bar_cropped_800.mp4" type="video/mp4" muted="false">
@@ -41,8 +46,8 @@
 </video>
 
 	
-			<div id="ss-links" class="ss-links">
-				<a class="ss-links2" href="#conflict1"><div class="arrow-down"></div></a>
+			<div id="ss-links" class="ss-links ss-links-before">
+				<!-- <a class="ss-links2" href="#conflict1"><div class="arrow-down"></div></a> -->
 				<a href="#introDiv"><p>INTRO</p></a>
 				<a href="#conflict1">1</a>
 				<a href="#conflict2">2</a>
@@ -155,7 +160,7 @@
 
 
 
-<!-- CONFLICT 3 -->
+<!-- CONFLICT 1 -->
 <div class="conflict" id="conflict1">
 	<div class="left">
     	<!-- This is the background image -->
@@ -244,8 +249,8 @@ I wish from life to die for Islam.
 
 
 
-<!-- LANDSCAPE 2 -->
-<div id="landscape2" class="landscape"></div>
+<!-- LANDSCAPE 3 -->
+<div id="landscape3" class="landscape"></div>
 
 
 
@@ -290,7 +295,7 @@ I want to see Kashmir and the world governed by the laws of Islam.
 	</div>
 </div> <!-- end of conflict3 -->
 
-<div id="landscape3" class="landscape"></div>
+<!-- <div id="landscape3" class="landscape"></div> -->
 
 
 
@@ -308,14 +313,26 @@ I want to see Kashmir and the world governed by the laws of Islam.
 	<script type="text/javascript">
 	$(document).ready(function() {	//this can be a place for all main initiators
 	window.isMute=false;
+		origWidth = $(window).width();  //store the window's width when the document loads
+
 	//initiate a main scroll tracker here and use this maybe //http://stackoverflow.com/questions/14390464/jquery-stick-div-on-scroll
 	//and the javascript plugin for easing and "scrollscript.js" if statements can activate a slow ease along with the volume boost of the new "active div", we can have the idea of active and passive divs. Videos can stop and sounds can stop for passive divs.
-	})
+	var introDiv_Height =$(window).height()*3.8;/* $('#intro-video').height(); */
+	var Window_Height =$(window).height();
+$('#conflict1').css('top', introDiv_Height);
+$('#landscape1').css('top', Window_Height+introDiv_Height);
+$('#conflict2').css('top', Window_Height*2+introDiv_Height);
+$('#landscape2').css('top', Window_Height*3+introDiv_Height);
+$('#conflict3').css('top', Window_Height*4+introDiv_Height);
+$('#landscape3').css('top', Window_Height*5+introDiv_Height);
+		})
 	//activate the full screen mode:
 			var FullscreenrOptions = {  width: 1300, height: 1951, bgID: '.BigImage', idRight: '.BigImage' };
 			// This will activate the full screen background!
 			jQuery.fn.fullscreenr(FullscreenrOptions);	
 	</script>
+	
+	
 	<script type="text/javascript" src="src/easeljs/events/EventDispatcher.js"></script>
 	<script type="text/javascript" src="src/soundjs/Sound.js"></script>
 	<script type="text/javascript" src="src/soundjs/WebAudioPlugin.js"></script>
@@ -323,6 +340,7 @@ I want to see Kashmir and the world governed by the laws of Islam.
 	<script type="text/javascript" src="src/soundjs/HTMLAudioPlugin.js"></script>
 	<script type="text/javascript" src="js/sound_player.js" ></script>
 	<script type="text/javascript" src="js/line.js" ></script>
+	<script type="text/javascript" src="js/arrow.js" ></script>
 	<script type="text/javascript" src="js/social.js" ></script>
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="js/scrollscript.js"></script>

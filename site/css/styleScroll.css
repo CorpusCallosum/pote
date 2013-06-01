@@ -37,6 +37,11 @@ h2.ss-subtitle:after{
 	z-index: 3000;
 	
 }
+.ss-links-before{
+position:absolute;
+left:20px;
+top:2200px;
+}
 .ss-links a{
 	background: rgba(0,0,0,0.2);
 	font-size: 16px;
@@ -57,26 +62,26 @@ h2.ss-subtitle:after{
 
 .ss-links a p{font-size:10px; margin-top:0px;}
 .ss-links a:hover{
-	/* background: rgba(0,0,0,0.4); */
+	background:rgba(0,0,0,.35)
 }
 
 
 .ss-links a.ss-links2{	
-	position: absolute;
-	margin-top:210%;
+	position: fixed;
+	top:80%;
 	/* left:375%; */
-	right:-285%;
+	left:85%;
 	z-index: 4000;
 	background: rgba(0,0,0,0.5);
 	font-size: 16px;
-	width: 35px;
-	height: 35px;
+	width: 55px;
+	height: 55px;
 	line-height: 90px;
-	/* margin: 5px; */
-	/* float: left; */
 	border-radius: 50%;
 	display: block;
 	text-align: center;
+	display:block;
+	padding:10px;
 	
 	-webkit-transition: background 0.2s linear;
 	-moz-transition: background 0.2s linear;
@@ -86,13 +91,12 @@ h2.ss-subtitle:after{
 	}
 
 
-
-
-
-
-.ss-links2 a:hover{
-	/* background: rgba(0,0,0,0.4); */
+.ss-links a.ss-links2:hover{background:rgba(0,0,0,.6);
 }
+.ss-links a.ss-links:hover{background:rgba(0,0,0,.6);
+}
+
+
 
 
 

@@ -118,11 +118,24 @@ $('.moveLine').css({ left:lineXpos+10});
 });
 
 var origWidth;
+/*
 $(document).ready(function() {
     origWidth = $(window).width();  //store the window's width when the document loads
 });
+*/
 
 $(window).resize(function() {
+					var introDiv_Height =$('#intro-video').height();
+	var Window_Height =$(window).height();
+$('#conflict1').css('top', introDiv_Height);
+$('#landscape1').css('top', Window_Height+introDiv_Height);
+$('#conflict2').css('top', Window_Height*2+introDiv_Height);
+$('#landscape2').css('top', Window_Height*3+introDiv_Height);
+$('#conflict3').css('top', Window_Height*4+introDiv_Height);
+$('#landscape3').css('top', Window_Height*5+introDiv_Height);	
+
+
+				
 				/*
 var documentHeight= $(document).height();
 				$('#line').css({ height:documentHeight+20});
