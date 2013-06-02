@@ -134,6 +134,8 @@ var maxthreshold3=  $("#landscape3").offset().top+$(window).height()*1.5;
  
  if(st >  $("#conflict1").offset().top){
   	   soundIndex = 0;
+  	   var video_element = document.getElementById('intro-video');
+      video_element.muted = "muted";
  }
 
  

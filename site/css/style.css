@@ -321,6 +321,17 @@ padding:0px;
 }
 
 
+.videoss{
+width:100%;
+height:auto;
+display:block;
+/* background:black; */
+position:absolute;
+top:0px;
+left:0px;
+margin:0px;
+padding:0px;}
+
 .socialShare{display:block; float:right; margin-right:50px; margin-top:-40px;}
 .socialShare a{margin:13px;}
 
