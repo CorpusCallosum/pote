@@ -46,13 +46,13 @@ stopSounds();
  function fadeOutLineOnLandscape(){
         $('.moveLine').fadeOut(1500);
         $('.moveLine').css('display', 'none');
-        $('#line').fadeOut(2800);
+        $('#line').fadeOut(3200);
        }
 
  function fadeInLineOnLandscape(){
        $('.moveLine').css('display', 'block');
        $('.moveLine').fadeOut(1).fadeIn(3000);
-       $('#line').fadeIn(2800);       
+       $('#line').fadeIn(3200);       
  }
   
 
