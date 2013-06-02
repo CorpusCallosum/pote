@@ -129,7 +129,7 @@ $(document).ready(function() {
 $(window).resize(function() {
 					/* var introDiv_Height =$('#intro-video').height(); */
 					var introDiv_Height =$(window).width()*1.86;
-	var Window_Height =$(window).height();
+	var WindowHeight =$(window).height();
 $('#conflict1').css('top', introDiv_Height);
 $('#landscape1').css('top', WindowHeight+introDiv_Height);
 $('#conflict2').css('top', WindowHeight*2+introDiv_Height);
@@ -195,7 +195,7 @@ $('.moveLine').css({ left:lineXpos+10});
 							  
 							  function fadeArrowsOut(){
 								   /* $('.moveLine').fadeOut(1000, fadeArrowsIn); */
-								   $('.moveLine').animate({opacity:.3},1500);
+								   $('.moveLine').animate({opacity:.4},1500);
 								   fadeArrowsIn();
 							  }
 							  
@@ -236,6 +236,12 @@ function shrinkArrows(){
 }
 
 $('.moveLine').mouseup(shrinkArrows);
+
+
+
+
+/* scrollposition = document.getElementsByTagName("body")[0].scrollTop + $(window).height(); */
+
 							  
   // return;
   // });

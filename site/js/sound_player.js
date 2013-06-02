@@ -42,7 +42,30 @@ init(sounds[soundIndex][0],sounds[soundIndex][1]);
 
 stopSounds();
 
+
+ function fadeOutLineOnLandscape(){
+       $('.moveLine').css('display', 'none');
+       $('#line').animate({opacity:0},2500);}
+       /* $('#line').css('display', 'none'); */
+ function fadeInLineOnLandscape(){  
+        $('.moveLine').css('display', 'block'); //working
+        /* $('#line').css('display', 'block'); */
+        $('#line').animate({opacity:1},1500);
+ }
+  
+
+
+
 window.onscroll = function (oEvent) {
+
+var minthreshold1=  $("#landscape1").offset().top+$(window).height()/2;
+var maxthreshold1=  $("#landscape1").offset().top+$(window).height()*1.5;
+var minthreshold2=  $("#landscape2").offset().top+$(window).height()/2;
+var maxthreshold2=  $("#landscape2").offset().top+$(window).height()*1.5;
+var minthreshold3=  $("#landscape3").offset().top+$(window).height()/2;
+var maxthreshold3=  $("#landscape3").offset().top+$(window).height()*1.5;
+ 
+
   // called when the window is scrolled.
   st = document.getElementsByTagName("body")[0].scrollTop + $(window).height();
  // alert(st);
@@ -60,18 +83,42 @@ window.onscroll = function (oEvent) {
  
  if(st >  $("#conflict1").offset().top){
   	   soundIndex = 0;
-
+       /* fadeInLineOnLandscape(); */
  }
+
+ 
   if(st >  $("#conflict2").offset().top){
 	 // stopSounds();
       soundIndex = 1;
+      
   }
+ 
+  
   
   if(st >  $("#conflict3").offset().top){
 	 // stopSounds();
       soundIndex = 2;
   }
   
+
+      
+
+  if(st >  minthreshold1   && st <=  maxthreshold1 ){
+  fadeOutLineOnLandscape();  	   
+ } else if(st >  minthreshold2   && st <=  maxthreshold2 ){
+  fadeOutLineOnLandscape();  	   
+ } else if(st >  minthreshold3   && st <=  maxthreshold3 ){
+  fadeOutLineOnLandscape();  	   
+ }else{fadeInLineOnLandscape(); }
+ 
+
+ 
+ 
+ 
+ 
+
+
+
   
   //load sound?
   if(lastSoundIndex != soundIndex){
