@@ -43,7 +43,7 @@ left:20px;
 top:2200px;
 }
 .ss-links a{
-	background: rgba(0,0,0,0.2);
+	background: rgba(0,0,0,0.3);
 	font-size: 16px;
 	width: 40px;
 	height: 40px;
@@ -62,7 +62,10 @@ top:2200px;
 
 .ss-links a p{font-size:10px; margin-top:0px;}
 .ss-links a:hover{
-	background:rgba(0,0,0,.35)
+	background:rgba(0,0,0,.55)
+}
+.ss-links2 a:hover{
+	background:rgba(0,0,0,.55)
 }
 
 
@@ -91,9 +94,9 @@ top:2200px;
 	}
 
 
-.ss-links a.ss-links2:hover{background:rgba(0,0,0,.6);
+.ss-links a.ss-links2:hover{background:rgba(0,0,0,.8);
 }
-.ss-links a.ss-links:hover{background:rgba(0,0,0,.6);
+.ss-links a.ss-links:hover{background:rgba(0,0,0,.8);
 }
 
 

@@ -44,23 +44,15 @@ stopSounds();
 
 
  function fadeOutLineOnLandscape(){
-       /* $('.moveLine').stop(true,false); */ 
-       /* $('#line').stop(true,false); */
         $('.moveLine').fadeOut(1500);
         $('.moveLine').css('display', 'none');
-        $('#line').fadeOut(3000);
-        
-        
+        $('#line').fadeOut(2800);
        }
 
  function fadeInLineOnLandscape(){
-      /*   $('.moveLine').stop(true,false); */ 
-       /* $('#line').stop(true,false); */ 
-       $('.moveLine').fadeOut(1500);
        $('.moveLine').css('display', 'block');
-       $('#line').fadeIn(3000);
-      
-       
+       $('.moveLine').fadeOut(1).fadeIn(3000);
+       $('#line').fadeIn(2800);       
  }
   
 
@@ -93,7 +85,6 @@ var maxthreshold3=  $("#landscape3").offset().top+$(window).height()*1.5;
  
  if(st >  $("#conflict1").offset().top){
   	   soundIndex = 0;
-       /* fadeInLineOnLandscape(); */
  }
 
  
