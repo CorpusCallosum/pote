@@ -17,6 +17,53 @@ var rightSound;
 //leftSound = createjs.Sound.play(sounds[soundIndex][0],  createjs.Sound.INTERRUPT_ANY, 0, 0, -1, -1);  // start playing the sound we just loaded, storing the playing instance
   //           rightSound =  createjs.Sound.play(sounds[soundIndex][1],  createjs.Sound.INTERRUPT_ANY, 0, 0, -1, 1);
 
+
+
+
+
+
+//this code below just sets the mute function on and off:
+$("#volumeControl").click(function() {
+var video=document.getElementById("intro-video");
+/* MUTE BUTTON: */
+if (isMute==false){ //if it is NOT MUTED and the button is PRESSED -> mute the video
+ isMute=true; 
+ //silence the audio
+ createjs.Sound.setVolume(0);
+ //silence video audio:
+video.muted="true";
+ //change to muted icon in mute button
+ var muteButton=document.getElementById('muteButtonImg');
+ muteButton.src='img/volume_mute.png';
+
+}else{ //else if the audio IS muted and the button is pressed -> UNMUTE it
+  isMute=false;
+  //turn audio back on:
+  createjs.Sound.setVolume(1);
+  //turn video audio back on:
+  video.muted="false";
+  /*  video.volume=1; */
+  //change to unmuted icon in mute button:
+  var muteButton=document.getElementById('muteButtonImg');
+  muteButton.src='img/volume.png';
+}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 init(sounds[soundIndex][0],sounds[soundIndex][1]);
 /*soundIndex = 1;
 init(sounds[soundIndex][0],sounds[soundIndex][1]);
@@ -47,12 +94,14 @@ stopSounds();
         $('.moveLine').fadeOut(1500);
         $('.moveLine').css('display', 'none');
         $('#line').fadeOut(3200);
+        $('#line').css('cursor','default');
        }
 
  function fadeInLineOnLandscape(){
        $('.moveLine').css('display', 'block');
-       $('.moveLine').fadeOut(1).fadeIn(3000);
-       $('#line').fadeIn(3200);       
+       
+       $('#line').fadeIn(3200);
+       $('#line').css('cursor','col-resize');       
  }
   
 
@@ -205,36 +254,3 @@ function updateVolume() {
 var refreshId = setInterval(updateVolume, 100);
 
 
-//this code below just sets the mute function on and off:
-$("#volumeControl").click(function() {
-var video=document.getElementById("intro-video");
-
-
-
-
-
-
-
-/* MUTE BUTTON: */
-if (isMute==false){ //if it is NOT MUTED and the button is PRESSED -> mute the video
- isMute=true; 
- //silence the audio
- createjs.Sound.setVolume(0);
- //silence video audio:
-video.muted="true";
- //change to muted icon in mute button
- var muteButton=document.getElementById('muteButtonImg');
- muteButton.src='img/volume_mute.png';
-
-}else{ //else if the audio IS muted and the button is pressed -> UNMUTE it
-  isMute=false;
-  //turn audio back on:
-  createjs.Sound.setVolume(1);
-  //turn video audio back on:
-  video.muted="false";
-  /*  video.volume=1; */
-  //change to unmuted icon in mute button:
-  var muteButton=document.getElementById('muteButtonImg');
-  muteButton.src='img/volume.png';
-}
-});
