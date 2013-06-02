@@ -48,7 +48,7 @@ stopSounds();
        /* $('#line').stop(true,false); */
         $('.moveLine').fadeOut(1500);
         $('.moveLine').css('display', 'none');
-        $('#line').fadeOut(3500);
+        $('#line').fadeOut(3000);
         
         
        }
@@ -58,7 +58,7 @@ stopSounds();
        /* $('#line').stop(true,false); */ 
        $('.moveLine').fadeOut(1500);
        $('.moveLine').css('display', 'block');
-       $('#line').fadeIn(3500);
+       $('#line').fadeIn(3000);
       
        
  }
