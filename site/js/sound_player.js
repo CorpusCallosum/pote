@@ -2,7 +2,7 @@
 //scroll audio controls
 
 //initiate the audio
-
+var isFadingOrUnfading=false;
 
 var soundIndex = 0;
 var lastSoundIndex = 0;
@@ -44,15 +44,22 @@ stopSounds();
 
 
  function fadeOutLineOnLandscape(){
-      $('.moveLine').fadeOut(1500);
-       $('.moveLine').css('display', 'none');
+       /* $('.moveLine').stop(true,false); */ 
+       /* $('#line').stop(true,false); */
+        $('.moveLine').fadeOut(1500);
+        $('.moveLine').css('display', 'none');
         $('#line').fadeOut(3500);
+        
+        
        }
 
- function fadeInLineOnLandscape(){  
-      $('.moveLine').fadeOut(1500);
+ function fadeInLineOnLandscape(){
+      /*   $('.moveLine').stop(true,false); */ 
+       /* $('#line').stop(true,false); */ 
+       $('.moveLine').fadeOut(1500);
        $('.moveLine').css('display', 'block');
        $('#line').fadeIn(3500);
+      
        
  }
   
@@ -105,19 +112,31 @@ var maxthreshold3=  $("#landscape3").offset().top+$(window).height()*1.5;
   
     
 
+/*
   if(st >  minthreshold1   && st <=  maxthreshold1 ){
-
+  	if(isFadingOrUnfading==false){fadeOutLineOnLandscape();}    	   
+ } else if(st >  minthreshold2   && st <=  maxthreshold2 ){
+    if(isFadingOrUnfading==false){fadeOutLineOnLandscape();}    
+ } else if(st >  minthreshold3   && st <=  maxthreshold3 ){
+    if(isFadingOrUnfading==false){fadeOutLineOnLandscape();}     
+ }else{
+    fadeInLineOnLandscape();      
+  }
+*/
+ 
+  if(st >  minthreshold1   && st <=  maxthreshold1 ){
+     $('#line').stop(true,false);
   	fadeOutLineOnLandscape();    	   
  } else if(st >  minthreshold2   && st <=  maxthreshold2 ){
+  $('#line').stop(true,false);
     fadeOutLineOnLandscape();    
  } else if(st >  minthreshold3   && st <=  maxthreshold3 ){
-    fadeOutLineOnLandscape();    
+  $('#line').stop(true,false);
+    fadeOutLineOnLandscape();     
  }else{
-    
-    fadeInLineOnLandscape();
+    $('#line').stop(false,true);
+    fadeInLineOnLandscape();      
   }
- 
-
  
  
  
