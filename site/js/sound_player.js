@@ -45,12 +45,17 @@ stopSounds();
 
  function fadeOutLineOnLandscape(){
        $('.moveLine').css('display', 'none');
-       $('#line').animate({opacity:0},2500);}
+       /* $('#line').animate({opacity:0},2500); */
+        $('#line').fadeOut(3500);
+       }
+      
+       
        /* $('#line').css('display', 'none'); */
  function fadeInLineOnLandscape(){  
         $('.moveLine').css('display', 'block'); //working
         /* $('#line').css('display', 'block'); */
-        $('#line').animate({opacity:1},1500);
+       /*  $('#line').animate({opacity:1},1500); */
+       $('#line').fadeIn(3500);
  }
   
 
