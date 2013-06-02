@@ -45,16 +45,18 @@ $('.moveLine').css({ left:lineXpos+10});
    var changeamount=windowWidth/2-lineXpos;
    $('.rightMoreDiv').css({ width:changeamount});
    $('.leftMoreDiv').css({ width:0});
-   $('.clearBlack.leftname').fadeOut(500);
-   $('.clearBlack.rightname').fadeIn(500);
+   $('.clearBlack.leftname').fadeOut(900);
+   if (lineXpos<windowWidth/2-70  ){
+   $('.clearBlack.rightname').fadeIn(900);}else{$('.clearBlack.rightname').fadeOut(1500);}
    }
 //else if it is moving to the right, increase the size of the right revealed div   
    else if(lineXpos>windowWidth/2+10){//change the width of leftMoreDiv
    var changeamount=lineXpos-windowWidth/2;
     $('.leftMoreDiv').css({ width:changeamount});
     $('.rightMoreDiv').css({ width:0});
-    $('.clearBlack.rightname').fadeOut(500);
-    $('.clearBlack.leftname').fadeIn(500);
+    $('.clearBlack.rightname').fadeOut(900);
+    if (lineXpos>windowWidth/2+70  ){
+    $('.clearBlack.leftname').fadeIn(900);}else{$('.clearBlack.leftname').fadeOut(1500);}
    }
    }); 
    
