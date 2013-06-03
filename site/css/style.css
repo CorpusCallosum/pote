@@ -85,17 +85,17 @@ display:none;
 	border:0px;
 }
 
-.leftMoreDiv{position:absolute; width:0px;height:100%;display:block;;background:rgba(0,0,0,.8);z-index: 999975; left:0px;}
+.leftMoreDiv{position:absolute; width:0px;height:100%;display:block;;background:rgba(0,0,0,.8);z-index: 75; left:0px;}
 
 /* background: url('../img/raster.png'); */
 
 
-.rightMoreDiv{position:absolute; width:0px; height:100%; display:block;  background:rgba(0,0,0,.8);z-index: 999975;right:0px;    
+.rightMoreDiv{position:absolute; width:0px; height:100%; display:block;  background:rgba(0,0,0,.8);z-index: 75;right:0px;    
 /* background: url('../img/landscape2.jpg'); background-position:fixed; background-size: cover; */
 }
 
 
-.moreInfo{display:block; position:absolute; top:-40px; height:100%; z-index:9999400; padding:40px;padding-top:0px; position:absolute;background: url('../img/raster.png'); }
+.moreInfo{display:block; position:absolute; top:-40px; height:100%; z-index:400; padding:40px;padding-top:0px; position:absolute;background: url('../img/raster.png'); }
 
 .leftMoreInfo{ right:0px; text-align:left; margin-right:130px; }
 .rightMoreInfo{left:0px;  text-align:right; margin-left:130px;}
@@ -104,7 +104,7 @@ display:none;
 
 
 
-.moreInfo p{color:white;z-index:9999450; width:350px;font-family: "Helvetica Neue"; font-size:14px; font-weight:lighter; line-height: 2em; margin-top:100px; /* background: rgba(0,0,0,0.5); */}
+.moreInfo p{color:white;z-index:450; width:350px;font-family: "Helvetica Neue"; font-size:14px; font-weight:lighter; line-height: 2em; margin-top:100px; /* background: rgba(0,0,0,0.5); */}
 
 
 #volumeControl{
@@ -147,6 +147,7 @@ font-family: "Helvetica"
    margin-left:-9px;
    margin-top:500px;
    opacity:1;
+   overflow:hidden;
 }
 
 .moveLine{

@@ -139,7 +139,7 @@ $('#landscape2').css('top', WindowHeight*3+introDiv_Height);
 $('#conflict3').css('top', WindowHeight*4+introDiv_Height);
 $('#landscape3').css('top', WindowHeight*5+introDiv_Height);
 $('#footer').css('top', WindowHeight*6+introDiv_Height);
-$('#line').css('height', WindowHeight*5.3+introDiv_Height);	
+$('#line').css('height', WindowHeight*5.5+introDiv_Height);	
 
 
 				
