@@ -15,7 +15,6 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<!-- DC Social Icons CSS -->
 		<link rel="stylesheet" type="text/css" href="http://www.dreamtemplate.com/dreamcodes/social_icons/tsc_social_icons.css" />
-        <link rel="shortcut icon" href="favicon.ico" />
 		</head>
 
 
@@ -109,7 +108,7 @@
                             <span>to photograph, film and interview <br>the foot soldiers on both sides.</span> </h3>
                     </div>
                     <div class="ss-right">
-						in Israel<br><br>
+						    in Israel<br><br>
                             Palestine<br><br>
 							Kashmir<br><br>
 							India<br><br>
@@ -140,12 +139,7 @@
 
 
 <!-- LANDSCAPE 1 -->
-<div class="landscape" id="landscape1" >
-<video id="video1" class="videoss" width="0px" height="auto" autoplay loop >
-    <source src="videos/kbk09017m0058.mp4" type="video/mp4" >
-    <source src="videos/kbk09017m0058.webm" type="video/webm" >
-</video>
-</div>
+<div class="landscape" id="landscape1" ></div>
 
 <!--
 <video width="100%" height="240" >
@@ -200,13 +194,7 @@ I wish the same thing as every human is wishing, like love, peace and happiness.
 
 
 <!-- LANDSCAPE 2 -->
-<div class="landscape" id="landscape2" >
-<video id="video2" class="videoss" width="0px" height="auto" autoplay loop >
-    <source src="videos/kbk09017m0057.mp4" type="video/mp4">
-    <source src="videos/kbk09017m0057.webm" type="video/webm" >
-</video>
-
-</div>
+<div class="landscape" id="landscape2"></div>
 
 
 
@@ -259,13 +247,7 @@ I wish from life to die for Islam.
 
 
 <!-- LANDSCAPE 3 -->
-<div id="landscape3" class="landscape">
-<video id="video3" class="videoss" width="0px" height="auto" autoplay loop >
-    <source src="videos/kbk09017m0059.mp4" type="video/mp4"  defaultPlaybackRate = ".2">
-    <source src="videos/kbk09017m0059.webm" type="video/webm"  defaultPlaybackRate = ".2">
-</video>
-
-</div>
+<div id="landscape3" class="landscape"></div>
 
 
 
@@ -329,16 +311,7 @@ I want to see Kashmir and the world governed by the laws of Islam.
 	$(document).ready(function() {	//this can be a place for all main initiators
 	window.isMute=false;
 		origWidth = $(window).width();  //store the window's width when the document loads
-    var video_element = document.getElementById('video1');
-    video_element.muted = "muted";
-    video_element.playbackRate=.5;
-    var video_element = document.getElementById('video2');
-    video_element.muted = "muted";
-    video_element.playbackRate=.3;
-    var video_element = document.getElementById('video3');
-    video_element.muted = "muted";
 
-    
 	//initiate a main scroll tracker here and use this maybe //http://stackoverflow.com/questions/14390464/jquery-stick-div-on-scroll
 	//and the javascript plugin for easing and "scrollscript.js" if statements can activate a slow ease along with the volume boost of the new "active div", we can have the idea of active and passive divs. Videos can stop and sounds can stop for passive divs.
 	var introDiv_Height =$(window).width()*1.86;/* $('#intro-video').height(); */
