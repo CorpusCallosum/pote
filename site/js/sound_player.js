@@ -93,7 +93,7 @@ stopSounds();
  function fadeOutLineOnLandscape(){
         $('.moveLine').fadeOut(1500);
         $('.moveLine').css('display', 'none');
-        $('#line').fadeOut(3200);
+        $('#line').fadeOut(2800);
         $('#line').css('cursor','default');
        }
 
@@ -121,8 +121,57 @@ var maxthreshold3=  $("#landscape3").offset().top+$(window).height()*1.5;
   st = document.getElementsByTagName("body")[0].scrollTop + $(window).height();
  // alert(st);
  var windowHigh=$(window).height();
- var introDiv_Height =$('#intro-video').height();
- if(st>introDiv_Height+ windowHigh-125){$('#ss-links').removeClass('ss-links-before');}
+ var introDiv_Height =$('#introDiv').height();
+ 
+ 
+//position the menu:
+ $('.ss-links-absolute').css('top', introDiv_Height-140);
+//if scrolled past introDiv, shrink menu  
+ if(st>introDiv_Height+ windowHigh-120){
+  if(menuShrunken==false){//and the menu is not yet shrunken, shrink it
+     $('.ss-links').removeClass('ss-links-absolute').addClass('ss-links-fixed').css('top',20).css('z-index',4000);
+     $('.ss-links a').animate({
+	    width: "20px",
+	    height: "20px"
+	    });
+     $('.ss-links a p').animate({fontSize:"4px"}).css('color','rgba(0,0,0,0)');
+     menuShrunken=true;
+     $('.ss-links a p.smaller').animate({fontSize:"4px"})
+     /*$ ('.ss-links a p.smaller').animate({}); */
+  }//end of if menushrunken==false
+ }else{//if still above introDiv and menu is not big,
+    if(menuShrunken==true){ 
+    	var introDiv_Height =$('#introDiv').height();
+ 		$('.ss-links').removeClass('ss-links-fixed').addClass('ss-links-absolute').css('top', introDiv_Height-80);
+	    $('.ss-links a').animate({
+	        width: "40px",
+	        height: "40px"});
+	    $('.ss-links a p').css('color','rgba(255,255,255,.8)').animate({
+ 			fontSize:"13px",
+		 	marginTop:"8px",
+		 	fontWeight:"100"});
+	    $('.ss-links a p.smaller').animate({fontSize:"9px"}); 
+	    menuShrunken=false;
+	}
+ }
+ 
+ 
+ /*
+ss-links-big a{
+    background: rgba(0,0,0,0.4);
+	width: 40px;
+	height: 40px;
+}
+.ss-links-big a p{
+font-size:13px; margin-top:0px; font-weight: 100; color:rgba(255,255,255,.8);
+}
+.ss-links-big a p.smaller{font-size:9px;}
+*/
+ 
+ 
+ 
+ 
+ /* {$('#ss-links').removeClass('ss-links-before');} */
  
   
  if(st <  $("#conflict1").offset().top){

@@ -14,8 +14,8 @@
         <link rel="stylesheet" type="text/css" href="css/styleScroll.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<!-- DC Social Icons CSS -->
-		<link rel="stylesheet" type="text/css" href="http://www.dreamtemplate.com/dreamcodes/social_icons/tsc_social_icons.css" />
-        <link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/dreamtemplate.css" />
+        <link rel="icon" href="/favicon.ico" />
 		</head>
 
 
@@ -26,7 +26,7 @@
 <!-- the line lives outside of the conflict divs so it can be as long as the whole document -->
 	<div id="enemyLine">		
 		<div class="moveLine">
-			<div class="circle"></br></br>DRAG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DRAG</div>
+			<div class="circle">DRAG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DRAG</div>
 			<div class="arrows arrow-right"></div>
 			<div class="arrows arrow-left"></div>	
 		</div>
@@ -40,7 +40,7 @@
 
 
 
-
+<!-- fix this, it is unnecessarily complicated: -->
 <div id="scrollDownArrow" class="ss-links">
 				<a class="ss-links2" href="#conflict1"><div class="arrow-down"></div></a>
 		</div>	
@@ -48,19 +48,20 @@
 
 
 
-
+<div id="ss-links" class="ss-links ss-links-absolute">
+				<a href="#introDiv"><p class="smaller">INTRO</p></a>
+				<a href="#conflict1"><p>1</p></a>
+				<a href="#conflict2"><p>2</p></a>
+				<a href="#conflict3"><p>3</p></a>
+				<a href="#footer"><p class="smaller">CREDITS</p></a>
+			</div>	
 <div id="introDiv">
-<video id="intro-video" width="0px" height="auto" autoplay loop >
+	<!-- <video id="intro-video" width="0px" height="auto" autoplay loop > -->
+    <video id="intro-video" autoplay loop >
     <source src="img/videos/bar_cropped_800.mp4" type="video/mp4" muted="false">
     <source src="img/videos/bar_cropped_800.webm" type="video/webm" muted="false">
 </video>
-			<div id="ss-links" class="ss-links ss-links-before">
-				<a href="#introDiv"><p>INTRO</p></a>
-				<a href="#conflict1">1</a>
-				<a href="#conflict2">2</a>
-				<a href="#conflict3">3</a>
-				<a href="#footer"><p>CREDITS</p></a>
-			</div>			
+					
          <div id="ss-container" class="ss-container">
                
                <div class="ss-row ss-small">
@@ -104,9 +105,9 @@
                 </div>               
                 
                 <div class="ss-row ss-small">
-                    <div class="ss-left">
-                        <h3>
-                            <span>to photograph, film and interview <br>the foot soldiers on both sides.</span> </h3>
+                    <div class="ss-left bigTopMargin2">
+                        
+                            <span>to photograph, film and interview <br>the foot soldiers on both sides.</span> 
                     </div>
                     <div class="ss-right">
 						in Israel<br><br>
@@ -125,11 +126,11 @@
 				<div class="ss-row ss-large">
                     <div class="ss-left">
                     </div>
-                    <div class="ss-right">
-                        <h3>
-                            <span>Use the enemy line</span>
+                    <div class="ss-right bigTopMargin2">
+                        
+                            <span>Use the enemy line</span><br>
                             <span>to navigate the space between the fighters.</span>
-                        </h3>
+                       
                     </div>
                 </div>
 			</div>
@@ -139,13 +140,6 @@
 
 
 
-<!-- LANDSCAPE 1 -->
-<div class="landscape" id="landscape1" >
-<video id="video1" class="videoss" width="0px" height="auto" autoplay loop >
-    <source src="videos/kbk09017m0058.mp4" type="video/mp4" >
-    <source src="videos/kbk09017m0058.webm" type="video/webm" >
-</video>
-</div>
 
 <!--
 <video width="100%" height="240" >
@@ -197,16 +191,16 @@ I wish the same thing as every human is wishing, like love, peace and happiness.
 
 
 
-
-
-<!-- LANDSCAPE 2 -->
-<div class="landscape" id="landscape2" >
-<video id="video2" class="videoss" width="0px" height="auto" autoplay loop >
-    <source src="videos/kbk09017m0057.mp4" type="video/mp4">
-    <source src="videos/kbk09017m0057.webm" type="video/webm" >
+<!-- LANDSCAPE 1 -->
+<div class="landscape" id="landscape1" >
+<video id="video1" class="videoss" width="0px" height="auto" autoplay loop >
+    <source src="videos/kbk09017m0058.mp4" type="video/mp4" >
+    <source src="videos/kbk09017m0058.webm" type="video/webm" >
 </video>
-
 </div>
+
+
+
 
 
 
@@ -256,16 +250,16 @@ I wish from life to die for Islam.
 
 
 
-
-
-<!-- LANDSCAPE 3 -->
-<div id="landscape3" class="landscape">
-<video id="video3" class="videoss" width="0px" height="auto" autoplay loop >
-    <source src="videos/kbk09017m0059.mp4" type="video/mp4"  defaultPlaybackRate = ".2">
-    <source src="videos/kbk09017m0059.webm" type="video/webm"  defaultPlaybackRate = ".2">
+<!-- LANDSCAPE 2 -->
+<div class="landscape" id="landscape2" >
+<video id="video2" class="videoss" width="0px" height="auto" autoplay loop >
+    <source src="videos/kbk09017m0057.mp4" type="video/mp4">
+    <source src="videos/kbk09017m0057.webm" type="video/webm" >
 </video>
 
 </div>
+
+
 
 
 
@@ -314,6 +308,49 @@ I want to see Kashmir and the world governed by the laws of Islam.
 
 
 
+<!-- LANDSCAPE 3 -->
+<div id="landscape3" class="landscape">
+<video id="video3" class="videoss" width="0px" height="auto" autoplay loop >
+    <source src="videos/kbk09017m0059.mp4" type="video/mp4"  defaultPlaybackRate = ".2">
+    <source src="videos/kbk09017m0059.webm" type="video/webm"  defaultPlaybackRate = ".2">
+</video>
+
+</div>
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<div id="footer"><p>Made during the POV hackathon by <a href="http://karimbenkhelifa.com" target="_blank">Karim Ben Khelifa</a>, <a href="http://jackkalish.com" target="_blank">Jack Kalish</a>, and <a href="http://mariarabinovich.com/" target="_blank">Maria Rabinovich</a>.  Photos by <a href="http://karimbenkhelifa.com" target="_blank">Karim Ben Khelifa</a>.</br>
+Contact: <a href="mailto:info@portraitsoftheenemies.com" target="_blank">info@portraitsoftheenemies.com</a></p>
+
+<div class="socialShare">
+
+
+<!-- facebook share -->
+<a class="facebook_round_gray_32 tsc_social_round_gray_32" title="facebook" href='http://www.facebook.com/share.php?u=http://www.portraitsoftheenemies.com' target="_blank">facebook</a>
+
+<!-- twitter share -->	
+<a class="twitter2_round_gray_32 tsc_social_round_gray_32" title="twitter" href="http://twitter.com/home?status=http://www.portraitsoftheenemies.com" target="_blank">Tweet</a>
+
+<!-- <a class="twitter2_round_gray_32 tsc_social_round_gray_32" title="twitter" href="https://twitter.com/share" data-lang="en" url="http://portraitsoftheenemies.com" text="Interactive photojournalism featuring work of Karim Ben Khelifa." hashtags="portraitsoftheenemies" target="_blank">Tweet</a> -->
+	
+</div><!-- end of social -->
+</div><!-- end of footer -->
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -328,7 +365,9 @@ I want to see Kashmir and the world governed by the laws of Islam.
 	<script type="text/javascript">
 	$(document).ready(function() {	//this can be a place for all main initiators
 	window.isMute=false;
-		origWidth = $(window).width();  //store the window's width when the document loads
+	origWidth = $(window).width();  //store the window's width when the document loads
+	menuShrunken=false;
+	
     var video_element = document.getElementById('video1');
     video_element.muted = "muted";
     video_element.playbackRate=.5;
@@ -336,27 +375,42 @@ I want to see Kashmir and the world governed by the laws of Islam.
     video_element.muted = "muted";
     video_element.playbackRate=.3;
     var video_element = document.getElementById('video3');
-    video_element.muted = "muted";
-
-    
+    video_element.muted = "muted";    
 	//initiate a main scroll tracker here and use this maybe //http://stackoverflow.com/questions/14390464/jquery-stick-div-on-scroll
 	//and the javascript plugin for easing and "scrollscript.js" if statements can activate a slow ease along with the volume boost of the new "active div", we can have the idea of active and passive divs. Videos can stop and sounds can stop for passive divs.
-	var introDiv_Height =$(window).width()*1.86;/* $('#intro-video').height(); */
-	
-	var WindowHeight =$(window).height();
-$('#conflict1').css('top', introDiv_Height);
-$('#landscape1').css('top', WindowHeight+introDiv_Height);
-$('#conflict2').css('top', WindowHeight*2+introDiv_Height);
-$('#landscape2').css('top', WindowHeight*3+introDiv_Height);
-$('#conflict3').css('top', WindowHeight*4+introDiv_Height);
-$('#landscape3').css('top', WindowHeight*5+introDiv_Height);
-$('#footer').css('top', WindowHeight*6+introDiv_Height);
-$('#line').css('height', WindowHeight*5.3+introDiv_Height);
-		})
+	/* var introDiv_Height =$(window).width()*1.86; *//* $('#intro-video').height(); */
+	var introDiv_Height='auto';	
+	if($(window).width()<=1200){
+	$('.bigTopMargin1').css('margin-top', 0);
+	$('.bigTopMargin2').css('margin-top', 0);
+	/* introDiv_Height='auto'; */
+	}/*
+else{
+	$('.bigTopMargin1').css('margin-top', 200);
+	$('.bigTopMargin2').css('margin-top', 400);
+	}
+*/
+
+	var WindowHeight =$(window).height();	
+	/* var videoHeight=$('#video1').height(); */
+	$('.conflict').css('height', WindowHeight);
+	$('.landscape').css('height', WindowHeight);
+	$('#introDiv').css('height', introDiv_Height);
+
+
+var lineheight=$('#introDiv').height()+	6*WindowHeight;
+/* var docHeight= $(document).height(); */
+$('#line').css('height', lineheight);
+
+
+		
 	//activate the full screen mode:
 			var FullscreenrOptions = {  width: 1300, height: 1951, bgID: '.BigImage', idRight: '.BigImage' };
 			// This will activate the full screen background!
 			jQuery.fn.fullscreenr(FullscreenrOptions);	
+			
+		})	
+			
 	</script>
 	
 	
@@ -364,7 +418,7 @@ $('#line').css('height', WindowHeight*5.3+introDiv_Height);
 	<script type="text/javascript" src="src/soundjs/Sound.js"></script>
 	<script type="text/javascript" src="src/soundjs/WebAudioPlugin.js"></script>
 	<script type="text/javascript" src="src/soundjs/HTMLAudioPlugin.js"></script>
-	<script type="text/javascript" src="src/soundjs/HTMLAudioPlugin.js"></script>
+<!-- 	<script type="text/javascript" src="src/soundjs/HTMLAudioPlugin.js"></script> -->
 	<script type="text/javascript" src="js/sound_player.js" ></script>
 	<script type="text/javascript" src="js/line.js" ></script>
 	<script type="text/javascript" src="js/arrow.js" ></script>
@@ -376,33 +430,9 @@ $('#line').css('height', WindowHeight*5.3+introDiv_Height);
 		
 		
 		
-		
-		
-		
-		
+			
 		
 	
-	
-		
-		
-<!-- FOOTER -->
-<div id="footer"><p>Made during the POV hackathon by <a href="http://karimbenkhelifa.com" target="_blank">Karim Ben Khelifa</a>, <a href="http://jackkalish.com" target="_blank">Jack Kalish</a>, and <a href="http://mariarabinovich.com/" target="_blank">Maria Rabinovich</a>.  Photos by <a href="http://karimbenkhelifa.com" target="_blank">Karim Ben Khelifa</a>.</br>
-Contact: <a href="mailto:info@portraitsoftheenemies.com" target="_blank">info@portraitsoftheenemies.com</a></p>
-
-<div class="socialShare">
-
-
-<!-- facebook share -->
-<a a class="facebook_round_gray_32 tsc_social_round_gray_32" title="facebook" href='http://www.facebook.com/share.php?u=http://www.portraitsoftheenemies.com' target="_blank">facebook</a>
-
-<!-- twitter share -->	
-<a class="twitter2_round_gray_32 tsc_social_round_gray_32" title="twitter" href="http://twitter.com/home?status=http://www.portraitsoftheenemies.com" target="_blank">Tweet</a>
-
-<!-- <a class="twitter2_round_gray_32 tsc_social_round_gray_32" title="twitter" href="https://twitter.com/share" data-lang="en" url="http://portraitsoftheenemies.com" text="Interactive photojournalism featuring work of Karim Ben Khelifa." hashtags="portraitsoftheenemies" target="_blank">Tweet</a> -->
-	
-</div><!-- end of social -->
-</div><!-- end of footer -->
-
 ​</body>
 </html>
  

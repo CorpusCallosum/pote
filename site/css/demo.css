@@ -1,12 +1,14 @@
 @import url('reset.css');
 
 /* General Demo Style */
+/*
 body{
     background: #f7f7f7 url(../images/old_wall.jpg) repeat top left;
     color: rgba(0,0,0,0.8);
     font-family: 'Kelly Slab','Myriad Pro', Arial, sans-serif;
     font-size: 15px;
 }
+*/
 a{
     color: #fff;
     text-decoration: none;

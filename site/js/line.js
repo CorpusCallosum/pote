@@ -121,26 +121,29 @@ $('.moveLine').css({ left:lineXpos+10});
    
 });
 
-var origWidth;
-/*
-$(document).ready(function() {
-    origWidth = $(window).width();  //store the window's width when the document loads
-});
-*/
+
 
 $(window).resize(function() {
-					/* var introDiv_Height =$('#intro-video').height(); */
-					var introDiv_Height =$(window).width()*1.86;
-	var WindowHeight =$(window).height();
-$('#conflict1').css('top', introDiv_Height);
-$('#landscape1').css('top', WindowHeight+introDiv_Height);
-$('#conflict2').css('top', WindowHeight*2+introDiv_Height);
-$('#landscape2').css('top', WindowHeight*3+introDiv_Height);
-$('#conflict3').css('top', WindowHeight*4+introDiv_Height);
-$('#landscape3').css('top', WindowHeight*5+introDiv_Height);
-$('#footer').css('top', WindowHeight*6+introDiv_Height);
-$('#line').css('height', WindowHeight*5.5+introDiv_Height);	
 
+   
+var introDiv_Height='auto';	
+	if($(window).width()<=1200){
+	$('.bigTopMargin1').css('margin-top', 0);
+	$('.bigTopMargin2').css('margin-top', 0);
+	/* introDiv_Height='auto'; */
+	}else{
+	$('.bigTopMargin1').css('margin-top', 200);
+	$('.bigTopMargin2').css('margin-top', 400);
+	}
+	var WindowHeight =$(window).height();	
+	/* var videoHeight=$('#video1').height(); */
+	$('.conflict').css('height', WindowHeight);
+	$('.landscape').css('height', WindowHeight);
+	$('#introDiv').css('height', introDiv_Height);
+
+var lineheight=$('#introDiv').height()+	6*WindowHeight;
+/* var docHeight= $(document).height(); */
+$('#line').css('height', lineheight);
 
 				
 
@@ -216,17 +219,25 @@ function fadethearrow(){$('.ss-links2').animate({opacity:0},2000);}
 function shrinkArrows(){
 	if(!arrowsShrunk){
 	
-		$('.circle').animate({
+	$('.circle').animate({
 	marginLeft: "-40px",   
     width: "80px",
-    borderRadius: "50%"});
-		
+    borderRadius: "50%",
+    paddingTop:"0px",
+    paddingBottom: "0px",
+    height:"80px"
+    });
+		/*
+$('.arrows').animate({
+	marginTop: "0px"});
+*/
+
 		//slide arrows
 		$('.arrow-right').animate({
-	marginLeft: "7px"});
+	marginLeft: "7px", marginTop:"0px"});
 		
 		$('.arrow-left').animate({
-	marginLeft: "-33px"});
+	marginLeft: "-35px", marginTop:"-33px"});
 		
 		//clear the div
 		$(".circle").empty();
